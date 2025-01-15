@@ -1,0 +1,14 @@
+env: "dev"
+
+level: "debug"
+
+server:
+  # address: "127.0.0.1:8080"
+  address: ":8080"
+  ssl_mode: disable
+  read_timeout: 5s
+  write_timeout: 5s
+
+postgres:
+  ssl_mode: disable
+  migration_path: migrations
