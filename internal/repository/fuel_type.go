@@ -17,7 +17,7 @@ func NewFuelTypePostgres(s *storage.Storage) *FuelTypePsql {
 func (r *FuelTypePsql) GetAll() ([]models.FuelType, error) {
 	var fuelTypes []models.FuelType
 
-	query := fmt.Sprintf(`SELECT ft.fuel_type_id, ft.fuel_type_shell, ft.fuel_type_form, ft.fuel_type_contact
+	query := fmt.Sprintf(`SELECT ft.fuel_type_shell, ft.fuel_type_form, ft.fuel_type_contact
     FROM %s AS ft`, fuelTypeTable)
 	err := r.storage.DB.Select(&fuelTypes, query)
 
