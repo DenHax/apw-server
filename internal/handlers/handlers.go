@@ -43,7 +43,8 @@ func (h *Handler) Init() *gin.Engine {
 		upload := api.Group("/upload")
 		{
 			upload.GET("/", h.getAllUpload)
-			upload.POST("/:id", h.createUpload)
+			upload.GET("/report/", h.getReport)
+			upload.POST("/", h.createUpload)
 			upload.DELETE("/:id", h.deleteUpload)
 		}
 		subsystem := api.Group("/subsystem")
@@ -53,6 +54,7 @@ func (h *Handler) Init() *gin.Engine {
 		employee := api.Group("/employee")
 		{
 			employee.GET("/", h.getAllEmployee)
+			employee.PUT("/:id", h.updateEmployeeById)
 		}
 
 	}
