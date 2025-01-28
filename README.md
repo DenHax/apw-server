@@ -6,6 +6,8 @@ DB connect: in .env
 
 API URL example: http://localhost:8080
 
+Database: [repository](https://github.com/DenHax/apw-db)
+
 # Handlers
 
 - Employee:
