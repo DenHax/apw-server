@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 WORKDIR /usr/local/src
 
@@ -10,7 +10,7 @@ RUN go mod download
 
 COPY ./ ./
 
-RUN go build -o ./bin/apw-server ./cmd/apw/main.go
+RUN go build -o ./bin/apw ./cmd/apw/main.go
 
 FROM alpine:3.20 AS runner
 
