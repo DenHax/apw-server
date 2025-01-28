@@ -1,0 +1,9 @@
+scripts/*
+!scripts/
+third_party
+.env
+.envrc
+devenv*
+.devenv*
+build
+init
