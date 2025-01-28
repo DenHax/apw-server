@@ -18,7 +18,7 @@
             # pkgs.go
           ];
           shellHooks = ''
-            source .env
+            source .env-compose
           '';
         };
       }
