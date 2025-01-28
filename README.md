@@ -2,9 +2,9 @@
 
 Backend in Golang: Gin, SQLX, PQ, Cleanenv
 
-DB connect: in .env
+DB connect: in .env or .env-compose
 
-API URL example: http://localhost:8080
+API URL example: http://localhost:8080/api/
 
 Database: [repository](https://github.com/DenHax/apw-db)
 
@@ -35,7 +35,24 @@ React frontend -> HTTP -> Handler -> Service -> Repository -> PostgreSQL
 
 # Get start
 
+Docker compose with storage and env:
+
+```sh
+make compose-autostart
+```
+
+Docker compose manual:
+
+```sh
+make compose-create-env # or modify .env-example for test compose config
+ENV=compose make activate-env # or sourcing .env-compose manually
+make compose-run # wait 10-15 second before run next script or remove -d from script for view postgres' logs
+make create-db # or remove cp data.sql from script for clean init database model
+```
+
+Manual without storage:
+
 ```go
 go mod tidy
-go run cmd/apw/main.go
+CONFIG=./configs/config.yaml go run cmd/apw/main.go
 ```
