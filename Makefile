@@ -2,29 +2,29 @@ all:
 	run-serv
 
 activate-env:
-	. ./script/activate-env.sh
+	. ./scripts/activate-env.sh
 
 compose-create-env:
-	. ./script/env-compose.sh
+	. ./scripts/env-compose.sh
 
 compose-run:
-	. ./script/docker_compose_run.sh
+	. ./scripts/docker_compose_run.sh
 
 compose-down:
-	. ./script/docker_compose_down.sh
+	. ./scripts/docker_compose_down.sh
 
 create-db:
-	. ./script/create-db-psql.sh
+	. ./scripts/create-db-psql.sh
 
 look-psql:
-	. ./script/lookup-storage.sh
+	. ./scripts/lookup-storage.sh
 
 run-serv:
-	CONFIG_PATH=${CONFIG_PATH} . script/run-serv.sh
+	CONFIG_PATH=${CONFIG_PATH} . scripts/run-serv.sh
 
 auto-start:
-	. script/autostart.sh
-	. script/psql_start.sh
+	. scripts/autostart.sh
+	. scripts/psql_start.sh
 	@$(MAKE) run-serv
 
 compose-autostart:
