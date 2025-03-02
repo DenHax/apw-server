@@ -35,17 +35,11 @@ React frontend -> HTTP -> Handler -> Service -> Repository -> PostgreSQL
 
 # Get start
 
-Docker compose with storage and env:
-
-```sh
-make compose-autostart
-```
-
 Docker compose manual:
 
 ```sh
 make compose-create-env # or modify .env-example for test compose config
-ENV=compose make activate-env # or sourcing .env-compose manually
+ENV=compose . ./scripts/activate-env.sh # activate environment variables
 make compose-run # wait 10-15 second before run next script or remove -d from script for view postgres' logs
 make create-db # or remove cp data.sql from script for clean init database model
 ```

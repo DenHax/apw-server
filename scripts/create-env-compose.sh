@@ -11,7 +11,7 @@ POSTGRES_DB=apw
 POSTGRES_PASSWORD=p4ssw0rd
 SSL_MODE=disable
 APP_PORT=8080
-POSTGRES_URL=postgres://\${POSTGRES_USER}:\${POSTGRES_PASSWORD}@\${POSTGRES_HOST}:\${POSTGRES_PORT}/\${POSTGRES_DB}?sslmode=\${SSL_MODE}
+POSTGRES_URL=postgres://admin:p4ssword@storage:5432/apw?sslmode=\disable
 EOL
   echo ".env-compose file created successfully"
 fi
