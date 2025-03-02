@@ -11,4 +11,5 @@ until PGPASSWORD="$POSTGRES_PASSWORD" psql -h "$POSTGRES_HOST" -U "$POSTGRES_USE
 done
 
 >&2 echo "Postgres is up - executing command"
+echo $cmd
 exec $cmd

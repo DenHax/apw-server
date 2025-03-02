@@ -17,7 +17,7 @@ FROM alpine:3.20 AS runner
 
 RUN apk add --no-cache ca-certificates postgresql-client
 
-COPY ./scripts/wait-storage.sh /tmp/wait.sh
+COPY ./scripts/wait-storage.sh /wait.sh
 
 RUN chmod 744 /wait.sh
 

@@ -2,7 +2,7 @@
 !/scripts/wait-storage.sh
 
 /build
-/deploymants
+/deployments
 /sql
 .env*
 
