@@ -8,6 +8,8 @@ API URL example: http://localhost:8080/api/
 
 Database: [repository](https://github.com/DenHax/apw-db)
 
+Frontend: [repository](https://github.com/DenHax/apw-client)
+
 # Handlers
 
 - Employee:
